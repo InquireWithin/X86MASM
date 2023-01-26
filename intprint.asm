@@ -53,11 +53,9 @@ main PROC c
 		mov dword ptr max,edx
 		jmp cont_loop
 	after_loop:
-		;push ecx
 		mov ebx, ecx
 		push offset newline
 		call printf
-		;pop ecx
 		add esp,4
 		push ebx
 		push offset maxprint
