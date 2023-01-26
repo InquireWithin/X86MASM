@@ -14,13 +14,6 @@ extern printf:NEAR
 main1 PROC c
 	push 10h ;esp -=4, a = 10h = [esp+4]
 	push 20h ;esp -=4, b = 20h = [esp]
-	;printf("%x is at %x",a,&a)
-
-	;push esp+4;offset 10h
-	;2 options:
-	;mov eax, esp
-	;add eax,4
-	;or
 	lea eax, [esp+4]
 
 	push eax ;adds 4 more bytes, must change esp+4 to esp+8 in the next line
